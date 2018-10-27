@@ -1,0 +1,36 @@
+import math
+l = [True for i in range (100000+1)]
+
+def computeGCD(x, y):
+	while  (y):
+		x, y = y, x % y
+		return x
+def seive () : 
+	p = []
+	n = 100000;
+	i = 2
+	while i*i <= n :
+		if l[i] == True :
+			for j in range (i*2, n, i) :
+				l[j] = False;
+		i += 1
+
+	for i in range (n) :
+		if l[i]:
+			p.append(i)
+	return p
+
+
+if __name__ == '__main__' :
+	p = seive ()
+	for _ in range (input()) :
+		n, k = map(int, raw_input().split())
+		a = map(int, raw_input().split())
+		
+
+
+		
+
+		
+
+
